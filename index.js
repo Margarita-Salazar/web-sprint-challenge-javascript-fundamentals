@@ -31,12 +31,11 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 
 function summation(count) {
   let newCount = 0
-  for(let i = 0; i < count; i++){
-    ++newCount
+  for(let i = 1; i <= count; i++){
+    newCount+=i
   }
   return newCount
-
-  }
+}
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -111,15 +110,12 @@ const zooAnimals = [
   */
 
   function USApop(array){
-    const totalPop = array.map(function(item){
-      return item.population
-    })
-    const usaTotalPop = totalPop.reduce(function(accumulator, currentValue){
-      return accumulator + currentValue
-    })
+    const usaTotalPop = array.reduce(function(accumulator, currentValue){
+      return accumulator + currentValue.population
+    },0)
     return usaTotalPop
   }
-  console.log(USApop(zooAnimals))
+  console.log('request4',USApop(zooAnimals))
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
