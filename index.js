@@ -34,7 +34,7 @@ function summation(count) {
   for(let i = 1; i <= count; i++){
     newCount+=i
   }
-  return newCount
+  return newCount;
 }
  
 
