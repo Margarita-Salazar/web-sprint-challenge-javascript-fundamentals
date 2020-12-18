@@ -17,7 +17,7 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
+//when a function runs if it has vairables that are not define within it will look at
 
 
 
@@ -187,7 +187,7 @@ CuboidMaker.prototype.volume = function(){
 
 
 CuboidMaker.prototype.surfaceArea = function(){
-  return 2 * (this.length * (this.length + this.width) * (this.height + this.width) * this.height)
+  return 2 * ((this.length * this.width) + (this.length * this.height) + (this.height * this.width))
 }
 
 
