@@ -17,7 +17,8 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-//when a function runs if it has vairables that are not define within it will look at
+//wwhen a function runs and it has variables that are not define within it will look at outside to find those 
+//specific variables.
 
 
 
@@ -31,7 +32,7 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 function summation(count) {
   let newCount = 0
   for(let i = 0; i < count; i++){
-    newCount = newCount + 1
+    ++newCount
   }
   return newCount
 
@@ -110,14 +111,15 @@ const zooAnimals = [
   */
 
   function USApop(array){
-    const totalPop = array.filter(function(item){
-      item.population
+    const totalPop = array.map(function(item){
+      return item.population
     })
     const usaTotalPop = totalPop.reduce(function(accumulator, currentValue){
       return accumulator + currentValue
     })
     return usaTotalPop
   }
+  console.log(USApop(zooAnimals))
   
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
@@ -231,8 +233,8 @@ let cuboidTwo = new CuboidMakerTwo({
 })
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-// console.log(cuboidTwo.volume()); // 100
-// console.log(cuboidTwo.surfaceArea()); // 130
+console.log(cuboidTwo.volume()); // 100
+console.log(cuboidTwo.surfaceArea()); // 130
 
 
 
